@@ -20,25 +20,23 @@ body{
 
 }
 .header{
-    grid-area: header;
+    display: grid;
     background-color: rgb(0, 191, 255);
-
+    grid-area: header;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
 }
 .header img{
     margin: 5px 0;
+    
 }
 
 .header p{
-   position: relative;
-   left: 50%;
-   right: 50%;
-   bottom: 55%;
-   
     
 }
 .texto{
     grid-area: main;
-    display: grid;
+    display: inline-block;
     justify-items: center;
     align-items: center;
     background-color: lightblue;

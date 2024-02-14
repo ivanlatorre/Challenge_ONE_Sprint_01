@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: "Public Sans", sans-serif;
+    font-size: 1.2rem;
+    min-height: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template: 
+        "header" 3em
+        "main"   1fr
+        "aside"  1fr
+        "footer" 3em;
+
+}
+.header{
+    grid-area: header;
+    background-color: rgb(0, 191, 255);
+}
+.texto{
+    grid-area: main;
+    background-color: lightblue;
+}
+.resultado{
+    grid-area: aside;
+    background-color: rgba(128, 128, 128, 0.233);
+}
+.footer{
+    grid-area: footer;
+    background-color:darkblue;
+}
+@media(min-width: 600px){
+    body{
+        grid-template: 
+        "header header" 3em 
+        "main aside"    1fr
+        "footer footer"  3em
+        ;
+        gap: 5px
+        ;
+    }
+}

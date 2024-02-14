@@ -38,8 +38,28 @@ body{
 }
 .texto{
     grid-area: main;
+    display: grid;
+    justify-items: center;
+    align-items: center;
     background-color: lightblue;
 
+}
+.texto textarea{
+    border: black 2px dotted;
+}
+.texto textarea::placeholder{
+    font-size: 2em;
+    font-weight: bold;
+    opacity: 0.5;
+    color: rgba(255, 0, 0, 0.651);
+}
+.texto button{
+    border-radius: 10px;
+    font-size: x-large;
+    font-weight: bold;
+    height: 100px;
+    width: 200px;
+    cursor:pointer;
 }
 .resultado{
     grid-area: aside;

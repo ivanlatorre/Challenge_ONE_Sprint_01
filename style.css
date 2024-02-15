@@ -9,6 +9,7 @@ html{
 body{
     font-family: "Public Sans", sans-serif;
     font-size: 1.2rem;
+    background: #f3f5fc;
     min-height: 100%;
     display: grid;
     gap: 5px;
@@ -21,7 +22,6 @@ body{
 }
 .header{
     display: grid;
-    background-color: rgb(0, 191, 255);
     grid-area: header;
     grid-template-columns: 1fr 2fr;
     align-items: center;
@@ -31,45 +31,57 @@ body{
     
 }
 
-.header p{
-    
-}
+
 .texto{
     grid-area: main;
     display: grid;
     justify-items: center;
     align-items: center;
-    background-color: lightblue;
+    position: relative;
 
 }
 .texto textarea{
-    border: black 2px dashed;
-    border-radius: 5%;
+    border-radius: 2%;
+    position: relative;
+    bottom: 12%;
 }
 .texto textarea::placeholder{
     font-size: 2em;
     font-weight: bold;
     opacity: 0.5;
-    color: rgba(255, 0, 0, 0.651);
+    color:#0a3871;
 }
-.texto button{
+.texto textarea:focus,
+.texto textarea:active{
+    border: none;
+    outline: none;
+}
+.texto p{
+    position: absolute;
+    top: 75%;
+    left: 13%;
+    color: #495057;
+}
+.boton-texto{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 79%;
+}
+.boton:first-child{
+    background-color: #0a3871;
+    color: #fff;
+}
 
-    font-size: x-large;
-    font-weight: bold;
-    height: 100px;
-    width: 200px;
-    cursor:pointer;
-    border-radius: 20%;
-    
-}
 .resultado{
     grid-area: aside;
     display: grid;
-
     justify-items: center;
     align-items: center;
-
-    background-color: rgba(128, 128, 128, 0.233);
+    background-color: white;
+    border-radius: 15%;
 }
 .resultado input{
     height: 500px;
@@ -78,13 +90,20 @@ body{
     border-radius: 5%;
 }
 
-.resultado button{
+.boton{
     font-size: x-large;
     font-weight: bold;
     height: 100px;
-    width: 200px;
+    width: 80%;
     cursor:pointer;
-    border-radius: 20%;
+    border-radius: 24px;
+    border: 1px solid #0a3871;
+    line-height: 19px;
+    background: #d8dfe8;
+    color: #0a3871;
+    margin: 5px;
+    
+    
 }
 .footer{
     grid-area: footer;
@@ -93,14 +112,37 @@ body{
     align-items: center;
     justify-content: center;
 }
+@media (max-width:949px) {
+    .texto textarea{
+        width: 85%;
+    }
+    .texto p{
+        left: 10%;
+    }
+
+}
 @media(min-width: 600px){
     body{
         grid-template: 
-        "header header" 3em 
+        "header aside" 3em 
         "main aside"    1fr
         "footer footer"  3em
         ;
         gap: 5px
         ;
+    }
+}
+@media(max-width: 359px){
+    .texto p{
+        left: 5%;
+        font-size: 0.5em;
+        margin: 5px;
+    }
+    .boton-texto{
+        top: 78%;
+        left: 10%;
+    }
+    .boton{
+        font-size: small;
     }
 }

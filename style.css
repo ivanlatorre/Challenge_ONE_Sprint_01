@@ -86,11 +86,15 @@ body{
     box-shadow: 0px 24px 32px -8px rgba(0, 0,0, 0.08);
 
 }
-.resultado input{
-    height: 500px;
-    width: 200px;
-    border-style: dashed;
-    border-radius: 5%;
+.texto-resultado{
+ display: grid;
+ align-items: end;
+ justify-items: center;
+ justify-self: end;
+
+}
+.resultado .boton{
+    display: none;
 }
 
 .boton{

@@ -21,30 +21,28 @@
     </header>
     
     <main class="texto">
-        <textarea name="texto" id="" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+        <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
         <p>Solo letras minúsculas y sin acentos</p>
         <div class="boton-texto">
-            <button class="boton" type="button">Encriptar</button>
-            <button class="boton" type="button">Desencriptar</button>
+            <button onclick="encriptar()" class="boton" type="button">Encriptar</button>
+            <button onclick="desencriptar()" class="boton" type="button">Desencriptar</button>
         </div>
-    
-    
     </main>
 
 
     <aside class="resultado">
-        <img src="/img/Muñeco.svg" alt="muñeco">
+        <img id="muneco" src="/img/Muñeco.svg" alt="muñeco">
         <div class="texto-resultado" id="texto-resultado">
+            <h3 class="texto-resuelto" id="texto-resuelto"></h3>
             <h2 id="titulo-mensaje">Ningún mensaje encontrado</h2>
             <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
-            <!-- <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea> -->
         </div>
         <button  class="boton"type="button">Copiar</button>
-
     </aside>
     
     <footer class="footer">
         <p>© copyright Lobito</p>
     </footer>
+    <script src="/index.js"></script>
 </body>
 </html>

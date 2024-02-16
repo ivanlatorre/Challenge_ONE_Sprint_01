@@ -118,14 +118,17 @@ body{
     top: 30%;
 
 }
-.resultado h2{
+.resultado h3{
     display: grid;
+    justify-content: center;
+    align-content: center;
     align-items: center;
     justify-content: center;
     gap: 10px;
     width: 100%;
     text-align: center;
     align-items: end;
+    word-break:break-all;
 }
 .resultado p {
     width: 80%;

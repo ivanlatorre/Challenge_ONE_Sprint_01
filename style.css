@@ -33,7 +33,7 @@ body{
 
 .texto{
     grid-area: main;
-    width: 75vw;
+    width: 70vw;
     display: grid;
     align-items: stretch;
     justify-items: stretch;
@@ -45,8 +45,8 @@ body{
 .texto textarea{
     border-radius: 2%;
     border: none;
-    width: 70vw;
-    height: 60vh;
+    width: 60vw;
+    height: 50vh;
     font-size: 24px;
     font-weight: bold;
     margin-left: 5%;
@@ -82,9 +82,10 @@ body{
 /* ASIDE */
 .resultado{
     display: grid;
+    overflow: hidden;
     grid-area: aside;
-    width: 20vw;
-    display: grid;
+    width: 30vw;
+    height: 90vh;
     justify-content: center;
     justify-items: center;
     align-items: center;
@@ -93,6 +94,7 @@ body{
     box-shadow: 0px 24px 32px -8px rgba(0, 0,0, 0.08);
     align-items: end;
     position: relative;
+    top: 2%;
 
 }
 .texto-resultado{

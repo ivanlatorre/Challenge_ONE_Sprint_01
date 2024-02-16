@@ -2,6 +2,7 @@ function encriptar(){
     let texto = document.getElementById("texto").value;
     let textoResuelto = document.getElementById("texto-resuelto");
     let tituloMensaje = document.getElementById("titulo-mensaje");
+    let copiar = document.getElementById("copiar");
     let parrafo = document.getElementById("parrafo");
     let muneco = document.getElementById("muneco");
     
@@ -14,11 +15,13 @@ function encriptar(){
     
     if (texto.length != 0){
         textoResuelto.innerText = textoCifrado;
-        tituloMensaje.textContent = "Texto encriptado con éxito";
+        tituloMensaje.textContent = "";
         parrafo.textContent = "";
+        copiar.style.display = "block";
         muneco.style.display = "none";    
     }else{
         muneco.style.display = "block";
+        copiar.style.display = "none";
         tituloMensaje.textContent = "Ningún mensaje encontrado";
         parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
         alert("Debes ingresar algún texto");
@@ -28,6 +31,7 @@ function desencriptar(){
     let texto = document.getElementById("texto").value;
     let textoResuelto = document.getElementById("texto-resuelto");
     let tituloMensaje = document.getElementById("titulo-mensaje");
+    let copiar = document.getElementById("copiar");
     let parrafo = document.getElementById("parrafo");
     let muneco = document.getElementById("muneco");
 
@@ -40,11 +44,13 @@ function desencriptar(){
 
     if (texto.length != 0){
         textoResuelto.innerText = textoCifrado;
-        tituloMensaje.textContent = "Texto desencriptado con éxito";
+        tituloMensaje.textContent = "";
         parrafo.textContent = "";
+        copiar.style.display = "block";
         muneco.style.display = "none";
     }else{
         muneco.style.display = "block";
+        copiar.style.display = "none";
         tituloMensaje.textContent = "Ningún mensaje encontrado";
         parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
         alert("Debes ingresar algún texto");

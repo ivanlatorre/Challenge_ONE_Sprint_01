@@ -137,6 +137,7 @@ body{
 }
 .resultado .boton{
     display: none;
+    width: 25vw;
 }
 
 .boton{

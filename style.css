@@ -169,6 +169,9 @@ body{
     align-items: center;
     justify-content: center;
 }
+.footer img{
+    width: 1vw;
+}
 @media (max-width: 995px) {
     body{
         font-size: 1rem;

@@ -56,3 +56,12 @@ function desencriptar(){
         alert("Debes ingresar algún texto");
         }
 }
+/*Boton copiar*/
+function copiarPortapapeles(){
+    let textoResuelto = document.getElementById("texto-resuelto");
+    let copiar = document.getElementById("copiar");
+
+    navigator.clipboard.writeText(textoResuelto.textContent);
+    copiar.textContent='Copiado'
+    setTimeout(()=>copiar.textContent = "Copiar",4000); 
+}

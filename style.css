@@ -173,6 +173,7 @@ body{
 }
 .footer img{
     width: 1.5vw;
+    margin: 0 5px;
 }
 @media (max-width: 995px) {
     body{
